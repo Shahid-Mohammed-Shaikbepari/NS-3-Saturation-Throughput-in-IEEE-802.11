@@ -1,4 +1,16 @@
 # Saturation-throughput
+#### Pre-Requisites:
+Please pre install NS-3 from NS-3 website in a VM by following the instructions.
+
+### NS-3 simulations
+In total four cases have been simulated as follows:
+#### Case   Minimum Backoff window size   Minimum Backoff window size    Date Rate    Number of nodes
+      A E1             1                            1023                  constant       change
+      A E2             1                            1023                  change         constant
+      B E1             63                           127                   constant       change
+      B E2             1                            127                   change         constant
+      
+
 The following instructions to run the NS-3 simulations:
 
 1. In terminal navigate to the NS-3 home directory and run the following command
@@ -39,9 +51,8 @@ path /src/wifi/model/regular-wifi-mac.cc
 we get plots
 
 
-
-### Section 1 : Matlab code folder contains two files 
-
+### Theorotical analysis of Binachi's model 
+In this section theorotical analysis of Binachi's model has been performed and ananlyzed with the simulation results
 * File 1 : Case A :  bianchi_analysisCaseA.m
     * To run this function :
     * [Throughput,Throughput_perNode] = bianchi_analysisCaseA(cwMin,N) 
@@ -50,3 +61,7 @@ we get plots
      * To run this function :
      * [Throughput,Throughput_perNode] = bianchi_analysisCaseB(cwMin,N) 
      * enter cwMin = 63 and N = any number of nodes, cwMax in the function is taken as 1023 ( m = 10).
+     
+### Results
+The results have been described in detail in the 'NS-3 Saturation Throughput.pdf' file with images and explanation
+
